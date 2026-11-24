@@ -35,6 +35,7 @@ https://github.com/futursolar/agent-pulse
 0x6cC807d492D8a10A16E5A7309d408801aaD025B5
 ```
 - **Deployment TxHash (Block `135429223`):** `0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444`
+- **Live Mainnet Attestation TxHash (`PULSE-SBT #1`, Block `135461669`):** `0xdf3395fcbaee5376602f17fb3a3f9255a4e3251e4d42e2f315716364ab88aee5` *(Executed natively via Binance Agentic Wallet CLI `baw v1.12.0 contract-call` for `redkoi.ai`: `totalScore = 84/100`, `uniqueAttestedAgents = 1`, `isLiveAgent(..., 60) = true`, `ERC-5192 locked(1) = true`, zero risk flags)*
 - **Official SPACE ID `.ai` Registry Integrated:** `0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F`
 - **Isolated Deployer (`owner`, `nonce=0`):** `0x46C4732D496b4f4d10aA41BA4164d89fF1d3b54D`
 - **Isolated EIP-712 `verifierSigner`:** `0x55c69DED9987840718186164dE1947486163a2Bc`

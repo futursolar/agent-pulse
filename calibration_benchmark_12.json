@@ -366,7 +366,7 @@
         "max": 15,
         "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
         "forwardConsistent": true,
-        "contractNonce": 0
+        "contractNonce": 1
       }
     },
     "riskFlags": [],
@@ -384,7 +384,7 @@
         "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
       },
       "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
-      "structHash": "0x5ed19e4a380f54e3b31522240d2a9631459d4e79abcdbdfc8b63775583a243c1",
+      "structHash": "0x8853395c5cf7e22da9666f8221f3209feb9e0ef43b4c07d01b4b06b65d5456be",
       "payload": {
         "wallet": "0x9556••••6A7f",
         "handle": "redkoi.ai",
@@ -396,13 +396,13 @@
         "d4Proof": 15,
         "issuedAt": 1795483959,
         "expiresAt": 1796693559,
-        "nonce": 0
+        "nonce": 1
       },
-      "signature": "0xdcdebe8078c8c0ccea4e8646f8cbbcd4efbfe9175f0ed2d057bdea80e25cc41166e53f974d16f096f54b9e5201fbcec2919d87766954ffa53b4892233faa12561b",
-      "digest": "0xc59b82dce622871d8898ce22a652a4898450ad0f47c68f56fa4df59db226b023",
+      "signature": "0x0f74594b6b11e12b1da38132a1b90300ccffb63131c0b61cef89e37bfed081816b382951714dfb6ed1b609bd3fc3c39de4041051670f219f8d6e6767e6ee072c1b",
+      "digest": "0x3884d7c7eca2597b99cd94fb7c715d39315057cf3449e25305ca3ebb89b9fb1f",
       "verifierSigner": "0x55c69DED9987840718186164dE1947486163a2Bc",
       "isDemoSigner": false,
-      "signedNonce": 0
+      "signedNonce": 1
     },
     "addressSha256": "36657128fb10fcc13915b9688f4abeae0731ca2d4ac52095368fecb59d352cdf"
   },

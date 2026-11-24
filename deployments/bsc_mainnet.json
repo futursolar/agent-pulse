@@ -21,6 +21,18 @@
   "status": "DEPLOYED_ON_BSC_MAINNET",
   "txHash": "0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444",
   "blockNumber": 135429223,
+  "liveAttestationProof": {
+    "txHash": "0xdf3395fcbaee5376602f17fb3a3f9255a4e3251e4d42e2f315716364ab88aee5",
+    "blockNumber": 135461669,
+    "executedVia": "Binance Agentic Wallet CLI (baw v1.12.0 contract-call)",
+    "handle": "redkoi.ai",
+    "badgeId": 1,
+    "tokenSymbol": "PULSE-SBT",
+    "totalScore": 84,
+    "isLiveAgent60": true,
+    "erc5192Locked": true,
+    "gasUsed": 254955
+  },
   "verifiedOnBscScan": true,
   "bscscanVerification": {
     "status": "Pass - Verified",
