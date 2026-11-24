@@ -3,6 +3,7 @@
 > **Privacy-First Self-Check Liveness Attestation & One-Line B2B Sybil-Resistance Gate for `.ai` Agent IDs on BNB Smart Chain**
 >
 > **Live Interactive Web App (Serverless GitHub Pages):** [https://futursolar.github.io/agent-pulse/](https://futursolar.github.io/agent-pulse/)
+> **60s HD Product Demo Video (1080p MP4):** [https://futursolar.github.io/agent-pulse/demo/agent-pulse-demo.mp4](https://futursolar.github.io/agent-pulse/demo/agent-pulse-demo.mp4)
 > **Open-Source Repository:** [https://github.com/futursolar/agent-pulse](https://github.com/futursolar/agent-pulse)
 > **Author:** RedKoi Research · **License:** MIT
 

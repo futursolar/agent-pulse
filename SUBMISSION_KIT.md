@@ -20,6 +20,11 @@ AgentPulse
 https://futursolar.github.io/agent-pulse/
 ```
 
+### 2b. 60s Product Demo Video URL (1080p MP4)
+```text
+https://futursolar.github.io/agent-pulse/demo/agent-pulse-demo.mp4
+```
+
 ### 3. Open-Source GitHub Repository URL
 ```text
 https://github.com/futursolar/agent-pulse
