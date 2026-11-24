@@ -30,6 +30,7 @@
   let currentReport = null;
   let cachedBenchmarkSamples = null;
   let currentLang = "en";
+  let latestAuditSeq = 0;
 
   const I18N = {
     en: {
@@ -888,6 +889,7 @@
   async function runAudit(target, opts = {}) {
     const clean = (target || "").trim();
     if (!clean) return null;
+    const seq = ++latestAuditSeq;
     auditBtn.disabled = true;
     auditBtn.textContent = t("auditLoading");
     try {
@@ -909,10 +911,12 @@
 
       if (shouldFallbackStatic) {
         const fallbackReport = await runServerlessFallbackAudit(clean);
+        if (seq !== latestAuditSeq) return null;
         renderReport(fallbackReport, { preserveTxStatus: Boolean(opts.preserveTxStatus) });
         return fallbackReport;
       }
 
+      if (seq !== latestAuditSeq) return null;
       if (!apiData.ok) {
         errorBox.textContent = `❌ ${apiData.error || "Verification failed"}`;
         errorBox.classList.remove("hidden");
@@ -922,12 +926,16 @@
       renderReport(apiData, { preserveTxStatus: Boolean(opts.preserveTxStatus) });
       return apiData;
     } catch (err) {
-      errorBox.textContent = `❌ ${err.message}`;
-      errorBox.classList.remove("hidden");
+      if (seq === latestAuditSeq) {
+        errorBox.textContent = `❌ ${err.message}`;
+        errorBox.classList.remove("hidden");
+      }
       return null;
     } finally {
-      auditBtn.disabled = false;
-      auditBtn.textContent = t("auditIdle");
+      if (seq === latestAuditSeq) {
+        auditBtn.disabled = false;
+        auditBtn.textContent = t("auditIdle");
+      }
     }
   }
 
@@ -1015,7 +1023,7 @@
       connectedAccount = accounts[0];
       connectBtn.textContent = `${t("connectedPrefix")}${connectedAccount.slice(0, 6)}...${connectedAccount.slice(-4)}`;
       input.value = connectedAccount;
-      runAudit(connectedAccount);
+      await runAudit(connectedAccount);
     } catch (err) {
       alert(`Wallet connection cancelled: ${err.message}`);
     }
@@ -1213,7 +1221,7 @@
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    runAudit(input.value);
+    return runAudit(input.value);
   });
 
   applyLanguageUI();
