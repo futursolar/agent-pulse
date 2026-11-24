@@ -25,10 +25,11 @@ https://futursolar.github.io/agent-pulse/
 https://github.com/futursolar/agent-pulse
 ```
 
-### 4. Smart Contract Address (BNB Smart Chain Mainnet, ChainID 56)
+### 4. Smart Contract Address (BNB Smart Chain Mainnet, ChainID 56 — LIVE DEPLOYED)
 ```text
 0x6cC807d492D8a10A16E5A7309d408801aaD025B5
 ```
+- **Deployment TxHash (Block `135429223`):** `0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444`
 - **Official SPACE ID `.ai` Registry Integrated:** `0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F`
 - **Isolated Deployer (`owner`, `nonce=0`):** `0x46C4732D496b4f4d10aA41BA4164d89fF1d3b54D`
 - **Isolated EIP-712 `verifierSigner`:** `0x55c69DED9987840718186164dE1947486163a2Bc`
