@@ -39,7 +39,9 @@ https://github.com/futursolar/agent-pulse
 - **Isolated Deployer (`owner`, `nonce=0`):** `0x46C4732D496b4f4d10aA41BA4164d89fF1d3b54D`
 - **Isolated EIP-712 `verifierSigner`:** `0x55c69DED9987840718186164dE1947486163a2Bc`
 - **Compiler / EVM / License:** `solc v0.8.24+commit.e11b9ed9` · Optimizer `200 runs` · `evmVersion = paris` · `MIT`
-- **Open-Source Verification (Sourcify V2 `exact_match`):** `matchId = 59824360` (`creationMatch = exact_match`, `runtimeMatch = exact_match`, verified `2026-11-24T08:18:23Z` at `https://sourcify.dev/server/v2/contract/56/0x6cC807d492D8a10A16E5A7309d408801aaD025B5`)
+- **Open-Source Verification (BscScan + Sourcify Dual Verified):**
+  - **BscScan Verified (`Pass - Verified`):** `https://bscscan.com/address/0x6cC807d492D8a10A16E5A7309d408801aaD025B5#code` (`GUID = zmwg7x9vfimhxhkptyuhsiyrmfsix5lvth63e288nvf3wz2mwc`)
+  - **Sourcify V2 `exact_match`:** `matchId = 59824360` (`creationMatch = exact_match`, `runtimeMatch = exact_match`, verified `2026-11-24T08:18:23Z` at `https://sourcify.dev/server/v2/contract/56/0x6cC807d492D8a10A16E5A7309d408801aaD025B5`)
 
 ### 5. Author / Team Name
 ```text

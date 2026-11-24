@@ -21,7 +21,13 @@
   "status": "DEPLOYED_ON_BSC_MAINNET",
   "txHash": "0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444",
   "blockNumber": 135429223,
-  "verifiedOnBscScan": false,
+  "verifiedOnBscScan": true,
+  "bscscanVerification": {
+    "status": "Pass - Verified",
+    "guid": "zmwg7x9vfimhxhkptyuhsiyrmfsix5lvth63e288nvf3wz2mwc",
+    "verifiedAt": "2026-11-24T11:48:45Z",
+    "codeUrl": "https://bscscan.com/address/0x6cC807d492D8a10A16E5A7309d408801aaD025B5#code"
+  },
   "verifiedOnSourcify": true,
   "sourcifyVerification": {
     "match": "exact_match",
