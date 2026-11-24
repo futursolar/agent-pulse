@@ -500,6 +500,9 @@
       const cloned = JSON.parse(JSON.stringify(matchedSample));
       cloned.isStaticPreview = true;
       cloned.staticModeType = "modeStaticSnap";
+      if (cloned.eip712 && cloned.eip712.payload && cloned.eip712.signedNonce === undefined) {
+        cloned.eip712.signedNonce = Number(cloned.eip712.payload.nonce || 0);
+      }
       if (connectedAccount && connectedSha && cloned.addressSha256 === connectedSha) {
         cloned.address = connectedAccount;
         cloned.addressLower = connectedAccount.toLowerCase();
@@ -1049,11 +1052,21 @@
     }
 
     const contractAddr = currentReport.eip712.domain.verifyingContract;
+    const provider = getProvider();
+    const signedNonce =
+      currentReport.eip712.signedNonce !== undefined
+        ? Number(currentReport.eip712.signedNonce)
+        : Number(currentReport.eip712.payload.nonce || 0);
+    const canBroadcastStaticSigned = Boolean(
+      provider &&
+      currentReport.staticModeType === "modeStaticSnap" &&
+      !currentReport.eip712.isDemoSigner &&
+      Number(currentReport.eip712.payload.nonce || 0) === signedNonce
+    );
     const isPlaceholderOrStatic =
       contractAddr.toLowerCase() === PLACEHOLDER_CONTRACT ||
-      Boolean(currentReport.isStaticPreview) ||
-      Boolean(currentReport.eip712.isDemoSigner);
-    const provider = getProvider();
+      Boolean(currentReport.eip712.isDemoSigner) ||
+      (Boolean(currentReport.isStaticPreview) && !canBroadcastStaticSigned);
 
     if (isPlaceholderOrStatic) {
       if (connectedAccount && connectedAccount.toLowerCase() !== currentReport.addressLower) {
@@ -1100,7 +1113,11 @@
       connectBtn.textContent = `${t("connectedPrefix")}${connectedAccount.slice(0, 6)}...${connectedAccount.slice(-4)}`;
 
       // Strict msg.sender == payload.wallet alignment guard (prevents InvalidSignature() gas waste & preserves banner!)
-      if (accounts[0].toLowerCase() !== currentReport.addressLower) {
+      const connectedAcctSha = await sha256Hex(accounts[0].toLowerCase());
+      const matchesMaskedOwner = Boolean(
+        currentReport.addressSha256 && connectedAcctSha === currentReport.addressSha256
+      );
+      if (accounts[0].toLowerCase() !== currentReport.addressLower && !matchesMaskedOwner) {
         const prevHandle = currentReport.handle || maskAddress(currentReport.address);
         input.value = accounts[0];
         txStatus.className = "tx-status";
@@ -1126,6 +1143,23 @@
       const refreshed = await runAudit(accounts[0], { refresh: true, preserveTxStatus: true });
       if (!refreshed || !currentReport || accounts[0].toLowerCase() !== currentReport.addressLower) return;
       if (!currentReport.hasAgentId || currentReport.historyUnverified) return;
+      if (
+        currentReport.isStaticPreview &&
+        (currentReport.eip712.isDemoSigner ||
+          Number(currentReport.eip712.payload.nonce || 0) !==
+            Number(
+              currentReport.eip712.signedNonce !== undefined
+                ? currentReport.eip712.signedNonce
+                : currentReport.eip712.payload.nonce || 0
+            ))
+      ) {
+        txStatus.className = "tx-status tx-ok";
+        txStatus.classList.remove("hidden");
+        txStatus.textContent = currentLang === "zh"
+          ? `✅ 您的 Soulbound 活体徽章已在 BSC 主网铸造生效 (链上 nonce=${currentReport.eip712.payload.nonce}, isLiveAgent=TRUE)！`
+          : `✅ Your Soulbound Liveness Badge is already active on BSC Mainnet (on-chain nonce=${currentReport.eip712.payload.nonce}, isLiveAgent=TRUE)!`;
+        return;
+      }
       if (!currentReport.isLiveAgent60 || currentReport.totalScore < 60) {
         txStatus.className = "tx-status";
         txStatus.classList.remove("hidden");
