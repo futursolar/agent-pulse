@@ -84,6 +84,7 @@ Every on-chain and off-chain score obeys exact biconditional parity: `d1 + d2 + 
 | **Isolated Deployer / `owner` Address** | `0x46C4732D496b4f4d10aA41BA4164d89fF1d3b54D` |
 | **Isolated `verifierSigner` Address** | `0x55c69DED9987840718186164dE1947486163a2Bc` |
 | **Compiler & Settings** | `solc v0.8.24+commit.e11b9ed9`, Optimizer `enabled (200 runs)`, `evmVersion = paris`, License `MIT` |
+| **Open-Source Bytecode Verification** | Sourcify V2 `exact_match` (`matchId = 59824360`, `creationMatch = exact_match`, `runtimeMatch = exact_match`, verified `2026-11-24T08:18:23Z` — [`sourcify.dev/server/v2/contract/56/0x6cC8...25B5`](https://sourcify.dev/server/v2/contract/56/0x6cC807d492D8a10A16E5A7309d408801aaD025B5)) |
 
 ### Exhaustive `owner` Permission Boundary Table
 

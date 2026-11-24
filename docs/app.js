@@ -412,7 +412,15 @@
     return "";
   }
 
+  function isFetchOk(resp) {
+    if (!resp) return false;
+    if (typeof resp.ok === "boolean") return resp.ok;
+    if (typeof resp.status === "number") return resp.status >= 200 && resp.status < 300;
+    return true;
+  }
+
   async function bscRpcBatch(calls) {
+    if (!Array.isArray(calls) || calls.length === 0) return [];
     for (let i = 0; i < BSC_RPC_ENDPOINTS.length; i++) {
       try {
         const resp = await fetch(BSC_RPC_ENDPOINTS[i], {
@@ -420,14 +428,31 @@
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(calls),
         });
+        if (!isFetchOk(resp)) continue;
         const arr = await resp.json();
-        if (Array.isArray(arr)) {
-          const map = {};
-          arr.forEach((item) => {
-            if (item && !item.error) map[item.id] = item.result;
-          });
-          return calls.map((c) => map[c.id] ?? null);
-        }
+        if (!Array.isArray(arr) || arr.length === 0) continue;
+        const map = {};
+        let okCount = 0;
+        let hasNodeOrRateError = false;
+        arr.forEach((item) => {
+          if (!item || typeof item !== "object") return;
+          if (!item.error && item.result !== undefined && item.result !== null) {
+            map[item.id] = item.result;
+            okCount += 1;
+          } else if (item.error) {
+            const errCode = Number(item.error.code || 0);
+            const errMsg = String(item.error.message || "").toLowerCase();
+            if (errCode === 3 || errMsg.includes("execution reverted")) {
+              map[item.id] = "0x";
+              okCount += 1;
+            } else {
+              hasNodeOrRateError = true;
+            }
+          }
+        });
+        if (okCount === 0) continue;
+        if (hasNodeOrRateError && i + 1 < BSC_RPC_ENDPOINTS.length) continue;
+        return calls.map((c) => (Object.prototype.hasOwnProperty.call(map, c.id) ? map[c.id] : null));
       } catch (_) {}
     }
     return calls.map(() => null);
@@ -439,6 +464,7 @@
     }
     try {
       const resp = await fetch("./calibration_benchmark_12.json");
+      if (!isFetchOk(resp)) return [];
       const raw = await resp.json();
       if (Array.isArray(raw)) {
         cachedBenchmarkSamples = raw;
@@ -524,6 +550,13 @@
           params: [{ to: SPACE_ID_AI_REGISTRY, data: encodeOwnerOfHandleCall(bare) }, "latest"],
         },
       ]);
+      if (ownerRes === null) {
+        throw new Error(
+          currentLang === "zh"
+            ? "公开 BSC RPC 节点限流或暂不可达，无法核验 SPACE ID 注册表，请稍后重试。"
+            : "Public BSC JSON-RPC endpoints are rate-limited or unreachable; unable to query SPACE ID Registry. Please retry."
+        );
+      }
       resolvedAddr = decodeAbiAddress(ownerRes);
       if (!resolvedAddr) {
         throw new Error(
@@ -1094,6 +1127,30 @@
         return;
       }
 
+      // Switch wallet to BNB Smart Chain (0x38) BEFORE calling eth_getCode so non-BSC wallets
+      // are never misidentified as querying an undeployed contract on Ethereum/Arbitrum/Base!
+      try {
+        await provider.request({
+          method: "wallet_switchEthereumChain",
+          params: [{ chainId: "0x38" }],
+        });
+      } catch (switchErr) {
+        if (switchErr && Number(switchErr.code) === 4902) {
+          await provider.request({
+            method: "wallet_addEthereumChain",
+            params: [{
+              chainId: "0x38",
+              chainName: "BNB Smart Chain",
+              nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 },
+              rpcUrls: ["https://bsc-dataseed.binance.org"],
+              blockExplorerUrls: ["https://bscscan.com"],
+            }],
+          });
+        } else {
+          throw switchErr;
+        }
+      }
+
       const deployedCode = await provider.request({
         method: "eth_getCode",
         params: [contractAddr, "latest"],
@@ -1108,10 +1165,6 @@
       }
 
       const calldata = encodeAttestLivenessCalldata(currentReport.eip712.payload, currentReport.eip712.signature);
-      await provider.request({
-        method: "wallet_switchEthereumChain",
-        params: [{ chainId: "0x38" }],
-      });
       const txHash = await provider.request({
         method: "eth_sendTransaction",
         params: [{

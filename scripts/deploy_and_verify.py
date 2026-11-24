@@ -5,8 +5,8 @@ One-Click Isolated Burner Deployment & BscScan Open-Source Verification Script f
 Safety & Key-Isolation Architecture:
 1. Defaults to DRY-RUN mode (zero gas spent, zero mainnet broadcast unless `--broadcast` is explicitly passed).
 2. Strict 3-Tier Cold/Hot Key Separation:
-   - Cold/Main Personal Wallet (e.g. `redkoi.ai` `0x9556...6A7f`) is STRICTLY FORBIDDEN as `--verifier-signer` or deployer.
-   - Burner Deployer Key (`DEPLOYER_PRIVATE_KEY` env var): ephemeral key funded with ~0.002 BNB solely for deployment.
+   - Cold/Main Personal Wallet is STRICTLY FORBIDDEN as `--verifier-signer` or deployer (enforced via SHA-256 digest guard).
+   - Burner Deployer Key (`DEPLOYER_PRIVATE_KEY` env var): ephemeral key funded with ~0.0005 BNB solely for deployment.
    - Isolated Verifier Signer (`--verifier-signer` or `AGENT_PULSE_SIGNER_ADDRESS`): dedicated backend EIP-712 hot oracle address.
 3. True One-Click Deploy + BscScan Verification:
    - Uses official Etherscan API V2 (`https://api.etherscan.io/v2/api?chainid=56&module=contract&action=verifysourcecode&apikey=...`)
@@ -17,6 +17,7 @@ Safety & Key-Isolation Architecture:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -42,13 +43,19 @@ DRY_RUN_ESTIMATE_SIGNER = Account.from_key(
     "0x" + keccak(b"AgentPulse:ephemeral-local-preview-test-vector-v1").hex()
 ).address
 
-# Explicitly blocked personal/cold vault addresses & public test keys that MUST NEVER be set as live verifierSigner
-FORBIDDEN_LIVE_SIGNERS = {
-    "0x95562a6e632c2b48d4788063e0e960afaee76a7f",  # Cold/hot wallet separation guard (never reuse personal EOA)
-    "0x2c7536e3605d9c16a7a3d7b1898e529396a65c23",  # Legacy public test vector
-    DRY_RUN_ESTIMATE_SIGNER.lower(),               # Ephemeral local preview vector
-    "0x0000000000000000000000000000000000000000",
+# SHA-256 digests of lowercase `0x...` addresses blocked as live production verifierSigner / deployer.
+# Storing SHA-256 digests enforces cold/hot wallet separation without exposing any personal EOA in plaintext.
+FORBIDDEN_LIVE_SIGNER_SHA256 = {
+    "36657128fb10fcc13915b9688f4abeae0731ca2d4ac52095368fecb59d352cdf",  # Cold/hot wallet separation digest
+    hashlib.sha256(b"0x2c7536e3605d9c16a7a3d7b1898e529396a65c23").hexdigest(),
+    hashlib.sha256(DRY_RUN_ESTIMATE_SIGNER.lower().encode("ascii")).hexdigest(),
+    hashlib.sha256(b"0x0000000000000000000000000000000000000000").hexdigest(),
 }
+
+
+def is_forbidden_live_signer(addr: str) -> bool:
+    digest = hashlib.sha256(addr.strip().lower().encode("ascii")).hexdigest()
+    return digest in FORBIDDEN_LIVE_SIGNER_SHA256
 
 
 def rpc_call(rpc_url: str, method: str, params: list) -> dict:
@@ -81,10 +88,10 @@ def resolve_verifier_signer(cli_signer: str, is_broadcast: bool) -> str:
     if not (candidate.startswith("0x") and len(candidate) == 42):
         raise ValueError(f"Invalid --verifier-signer address: {candidate}")
 
-    if is_broadcast and candidate.lower() in FORBIDDEN_LIVE_SIGNERS:
+    if is_broadcast and is_forbidden_live_signer(candidate):
         raise ValueError(
             f"Cold/Hot Isolation Guard: {candidate} is forbidden as live verifierSigner "
-            "(never use personal main wallet 0x9556...6A7f or public demo key on production)."
+            "(never reuse a personal main/cold wallet or public demo key on production)."
         )
 
     return to_checksum_address(candidate)
@@ -251,7 +258,7 @@ def main(argv: list[str] | None = None) -> int:
             print("ERROR: --broadcast requires isolated burner DEPLOYER_PRIVATE_KEY env variable.", file=sys.stderr)
             return 1
         deployer_acct = Account.from_key(priv_key)
-        if deployer_acct.address.lower() in FORBIDDEN_LIVE_SIGNERS:
+        if is_forbidden_live_signer(deployer_acct.address):
             print("ERROR: DEPLOYER_PRIVATE_KEY must be an isolated burner wallet, not a personal main wallet.", file=sys.stderr)
             return 1
         if deployer_acct.address.lower() == verifier_signer.lower():
@@ -320,7 +327,6 @@ def main(argv: list[str] | None = None) -> int:
             break
 
     if contract_addr and tx_status == 1 and api_key and not args.skip_verify:
-        # Wait briefly for BscScan indexer to index newly mined contract bytecode before verification
         time.sleep(8)
         summary["verification"] = run_verification_workflow(
             contract_address=contract_addr,

@@ -22,6 +22,16 @@
   "txHash": "0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444",
   "blockNumber": 135429223,
   "verifiedOnBscScan": false,
+  "verifiedOnSourcify": true,
+  "sourcifyVerification": {
+    "match": "exact_match",
+    "creationMatch": "exact_match",
+    "runtimeMatch": "exact_match",
+    "matchId": "59824360",
+    "verifiedAt": "2026-11-24T08:18:23Z",
+    "apiUrl": "https://sourcify.dev/server/v2/contract/56/0x6cC807d492D8a10A16E5A7309d408801aaD025B5",
+    "repoUrl": "https://repo.sourcify.dev/56/0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+  },
   "disclosedOwnerPermissions": {
     "onlyOwnerFunctions": [
       "setVerifierSigner(address newSigner)",
