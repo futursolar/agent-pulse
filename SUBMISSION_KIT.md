@@ -49,6 +49,11 @@ https://github.com/futursolar/agent-pulse
 RedKoi Research
 ```
 
+### 6. Official X (Twitter) Submission / Community Promo Post URL
+```text
+https://x.com/redkoi_eth/status/2125204727948517459
+```
+
 ---
 
 ## Part B — Short & Long Project Descriptions
