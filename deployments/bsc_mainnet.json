@@ -18,9 +18,9 @@
   },
   "license": "MIT",
   "constructorArgumentsNoPrefix": "00000000000000000000000055c69ded9987840718186164de1947486163a2bc0000000000000000000000000000000000000000000000000000000000000000",
-  "status": "DETERMINISTIC_READY_FUNDED",
-  "txHash": null,
-  "blockNumber": null,
+  "status": "DEPLOYED_ON_BSC_MAINNET",
+  "txHash": "0x67a82cbaa39ac0455b06ac860cd33d810ff1d166b2380943c925bf61d12d8444",
+  "blockNumber": 135429223,
   "verifiedOnBscScan": false,
   "disclosedOwnerPermissions": {
     "onlyOwnerFunctions": [
