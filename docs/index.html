@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AgentPulse — Self-Check Liveness Attestation &amp; B2B Sybil Gate for .ai Agents</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <header class="topbar">
+    <div class="brand">
+      <span class="pulse-dot"></span>
+      <span class="brand-title">AGENT<span>PULSE</span></span>
+      <span class="tag-pill" id="tagPill">Independent Tool · Built for .ai Agents on BSC</span>
+      <span class="mode-pill hidden" id="runtimeModeBadge"></span>
+    </div>
+    <div class="safety-banner">
+      <span class="shield" id="shieldBanner">🛡️ Zero Approvals · Non-Custodial · Privacy-Masked</span>
+      <button id="langToggleBtn" class="btn-lang" type="button" aria-label="Switch Language">中文</button>
+      <button id="connectBtn" class="btn-outline" type="button">Connect Wallet (Self-Verify &amp; Mint)</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 id="heroTitle">Self-Check Liveness Attestation &amp; One-Line <span>B2B Sybil Gate</span> for .ai Agents</h1>
+      <p class="subtitle" id="heroSubtitle">
+        Reads BSC SPACE ID Registry <code>0x60B9...022F</code> directly to verify <strong>72h Capital Seasoning · Temporal Entropy · Real Protocol Friction · EIP-712 Soulbound Proof</strong> — 100% deterministic, zero LLM hallucination.
+      </p>
+
+      <div class="privacy-notice" id="privacyNotice">
+        🔒 <strong>Privacy-First Compliance:</strong> AgentPulse is strictly a <em>Self-Check Liveness Attestation &amp; B2B Sybil-Resistance Gate</em> — NEVER a reverse wallet-lookup tool. Third-party <code>.ai</code> wallet &amp; funder addresses are always masked (<code>0x9556••••6A7f · Privacy-Masked</code>) unless verified by connecting the owner's wallet.
+      </div>
+
+      <form id="auditForm" class="search-bar">
+        <input
+          id="targetInput"
+          type="text"
+          placeholder="Self-check your .ai handle or connect wallet (e.g. redkoi.ai / m6n3b7v1.ai)"
+          value="redkoi.ai"
+          autocomplete="off"
+        />
+        <button id="auditBtn" class="btn-primary" type="submit">⚡ Run Liveness Self-Check</button>
+      </form>
+
+      <div class="quick-chips">
+        <span class="chip-label" id="chipLabel">Calibrated Mainnet Benchmarks (Privacy-Masked):</span>
+        <button type="button" class="chip" data-target="redkoi.ai" id="chipRedkoi">🔥 redkoi.ai (Live Multi-Protocol)</button>
+        <button type="button" class="chip" data-target="0xsun.ai" id="chipSun">🐋 0xsun.ai (Active Trader)</button>
+        <button type="button" class="chip" data-target="changpengzhao.ai" id="chipCz">🔶 changpengzhao.ai</button>
+        <button type="button" class="chip chip-danger" data-target="m6n3b7v1.ai" id="chipDust">🚨 m6n3b7v1.ai (Dust Sybil Cluster)</button>
+        <button type="button" class="chip chip-danger" data-target="light65.ai" id="chipDormant">🚨 light65.ai (0.0001 BNB Dormant Shell)</button>
+      </div>
+    </section>
+
+    <div id="errorBox" class="error-box hidden"></div>
+
+    <section id="resultPanel" class="dashboard hidden">
+      <!-- Left Card: Score Ring + Radar SVG + Soulbound Action -->
+      <div class="card radar-card">
+        <div class="score-header">
+          <div>
+            <div class="handle-badge" id="resHandle">redkoi.ai</div>
+            <div class="addr-mono" id="resAddress">0x9556••••6A7f · Privacy-Masked</div>
+          </div>
+          <div class="score-pill" id="resTierPill">
+            <span id="resScoreNum">82</span><small>/100</small>
+          </div>
+        </div>
+
+        <div class="verdict-banner" id="resVerdictBanner">
+          Verified Live Agent · Passes B2B Anti-Sybil Gate (isLiveAgent &gt;= 60)
+        </div>
+
+        <div class="radar-wrap">
+          <svg id="radarSvg" viewBox="0 0 280 260" aria-label="4D Liveness Radar"></svg>
+        </div>
+
+        <div class="cta-group">
+          <button id="mintBtn" class="btn-gold" type="button">
+            🏅 Mint Soulbound Liveness Badge (Gas &lt; $0.01 · Zero Approve)
+          </button>
+          <button id="shareBtn" class="btn-share" type="button">
+            🐦 Share Liveness Scorecard on X (#BinanceWalletHackathon)
+          </button>
+        </div>
+        <div id="txStatus" class="tx-status hidden"></div>
+      </div>
+
+      <!-- Right Card: 4D Breakdown + Audit Evidence + B2B Gate Code -->
+      <div class="card detail-card">
+        <h2 id="detailHeading">4D Deterministic Physical Liveness Breakdown (Zero LLM)</h2>
+
+        <div class="dim-list">
+          <div class="dim-item">
+            <div class="dim-top">
+              <span id="d1Label"><strong>D1 Funding Provenance &amp; Anti-Cluster</strong> (Blocks 1-to-8,000 dust fanout)</span>
+              <span class="dim-score" id="d1Val">0 / 30</span>
+            </div>
+            <div class="progress"><div id="d1Bar" class="bar"></div></div>
+            <p class="dim-meta" id="d1Meta"></p>
+          </div>
+
+          <div class="dim-item">
+            <div class="dim-top">
+              <span id="d2Label"><strong>D2 Temporal Span &amp; Interval Entropy</strong> (Penalizes 1h bursts &amp; fixed cron bots)</span>
+              <span class="dim-score" id="d2Val">0 / 25</span>
+            </div>
+            <div class="progress"><div id="d2Bar" class="bar"></div></div>
+            <p class="dim-meta" id="d2Meta"></p>
+          </div>
+
+          <div class="dim-item">
+            <div class="dim-top">
+              <span id="d3Label"><strong>D3 Real Economic Friction &amp; 72h Retention</strong> (Zero-value/approve = 0 pts)</span>
+              <span class="dim-score" id="d3Val">0 / 30</span>
+            </div>
+            <div class="progress"><div id="d3Bar" class="bar"></div></div>
+            <p class="dim-meta" id="d3Meta"></p>
+          </div>
+
+          <div class="dim-item">
+            <div class="dim-top">
+              <span id="d4Label"><strong>D4 SPACE ID Binding &amp; EIP-712 Proof</strong> (On-chain handleOf + ecrecover)</span>
+              <span class="dim-score" id="d4Val">0 / 15</span>
+            </div>
+            <div class="progress"><div id="d4Bar" class="bar"></div></div>
+            <p class="dim-meta" id="d4Meta"></p>
+          </div>
+        </div>
+
+        <div id="riskFlagsWrap" class="flags-wrap hidden"></div>
+
+        <div class="proof-box">
+          <div class="proof-head">
+            <span id="proofTitle">🔐 EIP-712 On-Chain Attestation Digest (Privacy-Guarded)</span>
+            <button id="copyProofBtn" class="btn-mini" type="button">Copy Payload</button>
+          </div>
+          <pre id="proofPre"></pre>
+        </div>
+
+        <div class="b2b-box">
+          <div class="proof-head">
+            <span id="b2bTitle">🔌 One-Line B2B Airdrop / Launchpad Sybil-Resistance Gate</span>
+          </div>
+          <pre><code>require(IAgentPulseGate(0x6cC807d492D8a10A16E5A7309d408801aaD025B5).isLiveAgent(msg.sender, 60), "Sybil .ai blocked");</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="card benchmark-section">
+      <div class="bench-head">
+        <h2 id="benchTitle">📊 BSC Mainnet Calibration Benchmark (Live Agents vs Dust Sybil Shells)</h2>
+        <span class="muted" id="benchHint">Click any row to inspect 4D physical liveness metrics (wallet addresses privacy-masked)</span>
+      </div>
+      <div class="table-scroll">
+        <table id="benchTable">
+          <thead>
+            <tr>
+              <th id="thHandle">Agent ID (.ai)</th>
+              <th id="thTier">Tier</th>
+              <th id="thScore">Score</th>
+              <th id="thD1">D1 Funding(30)</th>
+              <th id="thD2">D2 Entropy(25)</th>
+              <th id="thD3">D3 Friction(30)</th>
+              <th id="thD4">D4 Proof(15)</th>
+              <th id="thGate">isLiveAgent(60)</th>
+            </tr>
+          </thead>
+          <tbody id="benchBody">
+            <tr><td colspan="8" class="muted">Loading calibrated BSC mainnet benchmark...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card permissions-section" id="permissionsSection">
+      <div class="bench-head">
+        <h2 id="permTitle">🛡️ Open-Source Contract Architecture &amp; Disclosed Owner Permissions</h2>
+        <span class="muted" id="permSub">MIT Licensed · Solidity 0.8.24 (EVM Paris) · Zero Custody / Zero Approvals</span>
+      </div>
+
+      <div class="contract-meta-grid">
+        <div class="meta-kv">
+          <span class="meta-k" id="lblGateAddr">AgentPulseGate (BSC Mainnet, nonce=0)</span>
+          <code>0x6cC807d492D8a10A16E5A7309d408801aaD025B5</code>
+        </div>
+        <div class="meta-kv">
+          <span class="meta-k" id="lblRegAddr">SPACE ID .ai Registry (Immutable Read)</span>
+          <code>0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F</code>
+        </div>
+        <div class="meta-kv">
+          <span class="meta-k" id="lblOwnerAddr">Isolated Deployer / Owner</span>
+          <code>0x46C4732D496b4f4d10aA41BA4164d89fF1d3b54D</code>
+        </div>
+        <div class="meta-kv">
+          <span class="meta-k" id="lblSignerAddr">Isolated EIP-712 Verifier Signer</span>
+          <code>0x55c69DED9987840718186164dE1947486163a2Bc</code>
+        </div>
+      </div>
+
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th id="thPermFunc">Function / Capability</th>
+              <th id="thPermCaller">Caller Scope</th>
+              <th id="thPermImpact">Exact Scope &amp; User Fund Safety Boundary</th>
+            </tr>
+          </thead>
+          <tbody id="permBody">
+            <tr>
+              <td><code>setVerifierSigner(address)</code></td>
+              <td><code>onlyOwner</code></td>
+              <td id="tdPerm1">Rotates the EIP-712 score-oracle public key only. Cannot move user assets, cannot bypass live on-chain <code>SPACE ID handleOf(msg.sender)</code> check, and rejects <code>address(0)</code>.</td>
+            </tr>
+            <tr>
+              <td><code>transferOwnership(address)</code></td>
+              <td><code>onlyOwner</code></td>
+              <td id="tdPerm2">Transfers admin key to multisig or burn address (rejects <code>address(0)</code>). Grants zero financial or token privileges.</td>
+            </tr>
+            <tr>
+              <td><code>receive() / fallback()</code></td>
+              <td><code>payable -&gt; revert</code></td>
+              <td id="tdPerm3">Hard-reverts with <code>ZeroValueOnly()</code>. Contract holds <strong>0 BNB</strong>, charges <strong>0 protocol fees</strong>, and requests <strong>0 ERC-20 / NFT approvals</strong>.</td>
+            </tr>
+            <tr>
+              <td><code>No Admin Backdoors</code></td>
+              <td><code>Immutable</code></td>
+              <td id="tdPerm4">Non-upgradeable contract with <strong>NO</strong> <code>pause</code>, <code>freeze</code>, <code>blacklist</code>, <code>mint-token</code>, <code>withdraw</code>, or <code>selfdestruct</code> functions. ERC-5192 Soulbound (<code>SoulboundNonTransferable</code>).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="footer-disclaimer" id="footerDisclaimer">
+        Built independently by <strong>RedKoi Research</strong>. AgentPulse is an independent open-source project and is not affiliated with or endorsed by Binance or BNB Chain.
+      </p>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

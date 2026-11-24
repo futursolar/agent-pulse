@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+node_modules/
+.pytest_cache/
+.ruff_cache/
+.env
+*.env
+*.enc
+*.key
+*.bak*
+.calibration_raw_snapshots.json
+artifacts/deployment_mainnet.local.json

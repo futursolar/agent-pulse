@@ -1,0 +1,1211 @@
+[
+  {
+    "ok": true,
+    "address": "0x9E02••••591F",
+    "addressLower": "0x9e02••••591f",
+    "handle": "0xsun.ai",
+    "hasAgentId": true,
+    "totalScore": 91,
+    "tier": "S",
+    "verdictLabel": "Sovereign Live Agent (高净值实战活体)",
+    "isLiveAgent60": true,
+    "qualifiedTrack": "TRACK_A_SEASONED_CAPITAL",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 30,
+        "max": 30,
+        "firstFundingBNB": 0.019999,
+        "seasonedFundingBNB": 7.170349,
+        "historicalExtInUSD": 4420.49,
+        "netHistoricalCommitmentUSD": 0.0,
+        "trackBConservedCommitmentUSD": 0.0,
+        "funder": "0x1102••••a2c4",
+        "funderTxCount": 51,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 7,
+        "funderSameDust50": 2,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 24,
+        "max": 25,
+        "txCount": 264,
+        "spanDays": 14.04,
+        "activeDays": 13,
+        "entropyBits": 1.845,
+        "intervalCV": 3.321
+      },
+      "d3Economic": {
+        "score": 22,
+        "max": 30,
+        "protocolsHit": [
+          "DEX_SWAP"
+        ],
+        "feeBearingContracts": 1,
+        "realEconomicTxs": 5,
+        "feeBearingTxs": 5,
+        "zeroFrictionTxs": 145,
+        "retainedUSD": 614.52,
+        "seasonedRetainedUSD": 614.52,
+        "effectiveSeasonedUSD": 614.51,
+        "bnbBalance": 0.531186,
+        "wbnbBalance": 0.583722,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 551.18,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [],
+    "reasons": [
+      "D1(30/30): 入金溯源完成 (首笔 0.0200 BNB, 72h净沉淀=1.1149 BNB, 同源扇出=2)",
+      "D2(24/25): 跨度 14.04天 (13活跃日), 主动交易 264笔, 间隔熵 H=1.84bit / CV=3.32",
+      "D3(22/30): 白名单协议=['DEX_SWAP'] (有效摩擦 5笔 / 计费摩擦 5笔 / 零摩擦 145笔), 留存≈614.52 USD (72h连续净沉淀≈614.51 USD, BNB@551.18)",
+      "D4(15/15): 链上强验 0xsun.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x6a4875c28e87...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xd97c85bd2ca745066ac0d9237900218dffb90ca6e6b01cabb4c65f174e94999b",
+      "payload": {
+        "wallet": "0x9E02••••591F",
+        "handle": "0xsun.ai",
+        "handleHash": "0x3d67dcff05d3bb3baed31d6968e5e393bedb5d4d89d618fe6f4a993a4e73ce1c",
+        "totalScore": 91,
+        "d1Funding": 30,
+        "d2Temporal": 24,
+        "d3Economic": 22,
+        "d4Proof": 15,
+        "issuedAt": 1795488886,
+        "expiresAt": 1796698486,
+        "nonce": 0
+      },
+      "signature": "0x8de626a37a686caad4712cf191c1b32d1a2f131b97076061bc154974ee6dde9c0ba0a1e94663851149c22206517edb2769dac653a56bda15c43fd5e106a8ac3e1c",
+      "digest": "0x6a4875c28e87ea1ad7da193705e7bdfb26fb1068ed5882673d98829ebc84eaa0",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "e587cec8761c40f79f41bb2a5d77a157222fd2bc836fe00a8fbd01f68af1aa7d"
+  },
+  {
+    "ok": true,
+    "address": "0x5E3f••••75eA",
+    "addressLower": "0x5e3f••••75ea",
+    "handle": "binance.ai",
+    "hasAgentId": true,
+    "totalScore": 87,
+    "tier": "S",
+    "verdictLabel": "Sovereign Live Agent (高净值实战活体)",
+    "isLiveAgent60": true,
+    "qualifiedTrack": "TRACK_A_SEASONED_CAPITAL",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 30,
+        "max": 30,
+        "firstFundingBNB": 0.00099,
+        "seasonedFundingBNB": 0.015269,
+        "historicalExtInUSD": 8.56,
+        "netHistoricalCommitmentUSD": 0.0,
+        "trackBConservedCommitmentUSD": 0.0,
+        "funder": "0xa180••••d947",
+        "funderTxCount": 42764362,
+        "funderIsCexHotWallet": true,
+        "funderFanout50": 5,
+        "funderSameDust50": 0,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 23,
+        "max": 25,
+        "txCount": 16,
+        "spanDays": 17.19,
+        "activeDays": 6,
+        "entropyBits": 2.333,
+        "intervalCV": 1.528
+      },
+      "d3Economic": {
+        "score": 19,
+        "max": 30,
+        "protocolsHit": [
+          "DEX_SWAP"
+        ],
+        "feeBearingContracts": 1,
+        "realEconomicTxs": 3,
+        "feeBearingTxs": 3,
+        "zeroFrictionTxs": 11,
+        "retainedUSD": 84.99,
+        "seasonedRetainedUSD": 84.99,
+        "effectiveSeasonedUSD": 78.73,
+        "bnbBalance": 0.151539,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [],
+    "reasons": [
+      "D1(30/30): 入金溯源完成 (首笔 0.0010 BNB, 72h净沉淀=0.1404 BNB, 同源扇出=0, CEX热钱包豁免)",
+      "D2(23/25): 跨度 17.19天 (6活跃日), 主动交易 16笔, 间隔熵 H=2.33bit / CV=1.53",
+      "D3(19/30): 白名单协议=['DEX_SWAP'] (有效摩擦 3笔 / 计费摩擦 3笔 / 零摩擦 11笔), 留存≈84.99 USD (72h连续净沉淀≈78.73 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 binance.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x0f172caba358...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x3e19f35d8e41d13e9e8fb597459c2c2a54cd61e31c3dbbe47c8edff113088c2e",
+      "payload": {
+        "wallet": "0x5E3f••••75eA",
+        "handle": "binance.ai",
+        "handleHash": "0x292f8b521e80b1ccfe16b21ed913e67656621df1fedefc1757d4239da411d7fd",
+        "totalScore": 87,
+        "d1Funding": 30,
+        "d2Temporal": 23,
+        "d3Economic": 19,
+        "d4Proof": 15,
+        "issuedAt": 1795483970,
+        "expiresAt": 1796693570,
+        "nonce": 0
+      },
+      "signature": "0x9f0e171a2619465a79c730e3a7ce75d7ac2950398c7501d9aefe14bee03cb8e539e57e924f2301998a0e2a18ad546b258855971ea18181c46dea900c307c053c1b",
+      "digest": "0x0f172caba3585b428d07263a2c1e8c15ab387f59c407a7df3c69d0ee20aafd97",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "1ac357859f1c278024344187d6d83b9c769abb7fb046719e89e3a431d3f789d0"
+  },
+  {
+    "ok": true,
+    "address": "0x7227••••72c6",
+    "addressLower": "0x7227••••72c6",
+    "handle": "changpengzhao.ai",
+    "hasAgentId": true,
+    "totalScore": 86,
+    "tier": "S",
+    "verdictLabel": "Sovereign Live Agent (高净值实战活体)",
+    "isLiveAgent60": true,
+    "qualifiedTrack": "TRACK_A_SEASONED_CAPITAL",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 30,
+        "max": 30,
+        "firstFundingBNB": 0.02,
+        "seasonedFundingBNB": 0.331759,
+        "historicalExtInUSD": 243.3,
+        "netHistoricalCommitmentUSD": 0.0,
+        "trackBConservedCommitmentUSD": 0.0,
+        "funder": "0xbbac••••7614",
+        "funderTxCount": 3814,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 4,
+        "funderSameDust50": 0,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 21,
+        "max": 25,
+        "txCount": 60,
+        "spanDays": 6.92,
+        "activeDays": 4,
+        "entropyBits": 1.856,
+        "intervalCV": 4.888
+      },
+      "d3Economic": {
+        "score": 20,
+        "max": 30,
+        "protocolsHit": [
+          "DEX_SWAP"
+        ],
+        "feeBearingContracts": 1,
+        "realEconomicTxs": 5,
+        "feeBearingTxs": 5,
+        "zeroFrictionTxs": 54,
+        "retainedUSD": 178.05,
+        "seasonedRetainedUSD": 178.05,
+        "effectiveSeasonedUSD": 178.05,
+        "bnbBalance": 0.317523,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.75,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [],
+    "reasons": [
+      "D1(30/30): 入金溯源完成 (首笔 0.0200 BNB, 72h净沉淀=0.3175 BNB, 同源扇出=0)",
+      "D2(21/25): 跨度 6.92天 (4活跃日), 主动交易 60笔, 间隔熵 H=1.86bit / CV=4.89",
+      "D3(20/30): 白名单协议=['DEX_SWAP'] (有效摩擦 5笔 / 计费摩擦 5笔 / 零摩擦 54笔), 留存≈178.05 USD (72h连续净沉淀≈178.05 USD, BNB@560.75)",
+      "D4(15/15): 链上强验 changpengzhao.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0xf305b7337660...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x0283a61d2320f3d02e88dde14a92c16e5f22ef16df72d84aec2633d5af2f9304",
+      "payload": {
+        "wallet": "0x7227••••72c6",
+        "handle": "changpengzhao.ai",
+        "handleHash": "0x56961b83c217be384cde29d68b777a8198e6810e4644ff62aee8bc0f419b74d3",
+        "totalScore": 86,
+        "d1Funding": 30,
+        "d2Temporal": 21,
+        "d3Economic": 20,
+        "d4Proof": 15,
+        "issuedAt": 1795483889,
+        "expiresAt": 1796693489,
+        "nonce": 0
+      },
+      "signature": "0x768e711fc8fcce469f2a73f82ea723e25458d0f787376203d63604c61eee5a204e99df88e038fecf449373d541cb8bccbd99b10dd2b75b810ac894a7981e407c1c",
+      "digest": "0xf305b73376608664011d9df4c9d0f9463624f9b54f613cd8af7ead0379fb6977",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "d3f3df0bb61d767f6b63d9c5db8ba26062af932b84472f8efdd234b40518a6b4"
+  },
+  {
+    "ok": true,
+    "address": "0x9556••••6A7f",
+    "addressLower": "0x9556••••6a7f",
+    "handle": "redkoi.ai",
+    "hasAgentId": true,
+    "totalScore": 84,
+    "tier": "S",
+    "verdictLabel": "Sovereign Live Agent (高净值实战活体)",
+    "isLiveAgent60": true,
+    "qualifiedTrack": "TRACK_B_VETERAN_MULTI_PROTOCOL",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 27,
+        "max": 30,
+        "firstFundingBNB": 0.007943,
+        "seasonedFundingBNB": 0.015869,
+        "historicalExtInUSD": 215.5,
+        "netHistoricalCommitmentUSD": 189.39,
+        "trackBConservedCommitmentUSD": 189.39,
+        "funder": "0x2530••••8ab8",
+        "funderTxCount": 97,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 5,
+        "funderSameDust50": 2,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 22,
+        "max": 25,
+        "txCount": 23,
+        "spanDays": 24.05,
+        "activeDays": 10,
+        "entropyBits": 2.054,
+        "intervalCV": 1.34
+      },
+      "d3Economic": {
+        "score": 20,
+        "max": 30,
+        "protocolsHit": [
+          "DEX_SWAP",
+          "ECOSYSTEM_DIVERSITY",
+          "LENDING_YIELD_BRIDGE",
+          "PREDICTION_PERP"
+        ],
+        "feeBearingContracts": 4,
+        "realEconomicTxs": 16,
+        "feeBearingTxs": 16,
+        "zeroFrictionTxs": 13,
+        "retainedUSD": 0.08,
+        "seasonedRetainedUSD": 0.08,
+        "effectiveSeasonedUSD": 0.08,
+        "bnbBalance": 0.000138,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [],
+    "reasons": [
+      "D1(27/30): 轨B资深多协议合规入金溯源通过 (历史净合规入金≈189.39 USD, 首笔 0.0079 BNB)",
+      "D2(22/25): 跨度 24.05天 (10活跃日), 主动交易 23笔, 间隔熵 H=2.05bit / CV=1.34",
+      "D3(20/30): 白名单协议=['DEX_SWAP', 'ECOSYSTEM_DIVERSITY', 'LENDING_YIELD_BRIDGE', 'PREDICTION_PERP'] (有效摩擦 16笔 / 计费摩擦 16笔 / 零摩擦 13笔), 留存≈0.08 USD (72h连续净沉淀≈0.08 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 redkoi.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0xc59b82dce622...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x5ed19e4a380f54e3b31522240d2a9631459d4e79abcdbdfc8b63775583a243c1",
+      "payload": {
+        "wallet": "0x9556••••6A7f",
+        "handle": "redkoi.ai",
+        "handleHash": "0xa9f6eb087a6a4341b3aa40d89ee1c7be3621f8e0d96d4c5cb1a3d7d10c0cd59d",
+        "totalScore": 84,
+        "d1Funding": 27,
+        "d2Temporal": 22,
+        "d3Economic": 20,
+        "d4Proof": 15,
+        "issuedAt": 1795483959,
+        "expiresAt": 1796693559,
+        "nonce": 0
+      },
+      "signature": "0xaff19ef46d6a3a64d57e40dbd3e54f1760a4ba251c4306eb8f0d1ebd77e7483460cde307112d822218d067e87fd46767f9a0be8f3274317136ce7a922f37a90e1c",
+      "digest": "0xc59b82dce622871d8898ce22a652a4898450ad0f47c68f56fa4df59db226b023",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "36657128fb10fcc13915b9688f4abeae0731ca2d4ac52095368fecb59d352cdf"
+  },
+  {
+    "ok": true,
+    "address": "0x72B7••••3004",
+    "addressLower": "0x72b7••••3004",
+    "handle": "heyi.ai",
+    "hasAgentId": true,
+    "totalScore": 51,
+    "tier": "B",
+    "verdictLabel": "Emerging / Low-Friction Agent (新晋/低摩擦待沉淀)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 30,
+        "max": 30,
+        "firstFundingBNB": 0.99999,
+        "seasonedFundingBNB": 4.328895,
+        "historicalExtInUSD": 2427.85,
+        "netHistoricalCommitmentUSD": 2427.85,
+        "trackBConservedCommitmentUSD": 2427.85,
+        "funder": "0x01c9••••0bb0",
+        "funderTxCount": 4927442,
+        "funderIsCexHotWallet": true,
+        "funderFanout50": 63,
+        "funderSameDust50": 0,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 0,
+        "max": 25,
+        "txCount": 1,
+        "spanDays": 0.0,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 6,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 2484.73,
+        "seasonedRetainedUSD": 2484.73,
+        "effectiveSeasonedUSD": 2445.63,
+        "bnbBalance": 4.398592,
+        "wbnbBalance": 0.029929,
+        "stableUSD": 1.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "SINGLE_HOUR_DORMANT_SHELL"
+    ],
+    "reasons": [
+      "D1(30/30): 入金溯源完成 (首笔 1.0000 BNB, 72h净沉淀=4.3606 BNB, 同源扇出=0, CEX热钱包豁免)",
+      "D2(0/25): 跨度 0.00天 (1活跃日), 主动交易 1笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(6/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈2484.73 USD (72h连续净沉淀≈2445.63 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 heyi.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x7b9d18000dd9...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x087f040bb385b2875301007f1a2dcc4a0b26b1ffdeb3813937dbdac7cd8a353e",
+      "payload": {
+        "wallet": "0x72B7••••3004",
+        "handle": "heyi.ai",
+        "handleHash": "0x9fb63be6c84c180bb8129e69e72ac76a5f96492d91fb9e0dbc022160deecf4b4",
+        "totalScore": 51,
+        "d1Funding": 30,
+        "d2Temporal": 0,
+        "d3Economic": 6,
+        "d4Proof": 15,
+        "issuedAt": 1795484035,
+        "expiresAt": 1796693635,
+        "nonce": 0
+      },
+      "signature": "0xc1fa16519ced8aba634d7006d6f25fe622b0b6607d9af8211526b754dad3362275d79a8989030b0d6af7bbbf8cf6fbd08795f7bfa215fd8ca29e04a6ba55b0f21c",
+      "digest": "0x7b9d18000dd9a3c03d3c2ec2ceb8629c5dff375c85a0e8dafc72ae630b282416",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "affc67f667cba4ab00b0841d269aff00d16ff6bf73944b9f03dcd02fd75df3cf"
+  },
+  {
+    "ok": true,
+    "address": "0xF611••••B7eD",
+    "addressLower": "0xf611••••b7ed",
+    "handle": "ansem.ai",
+    "hasAgentId": true,
+    "totalScore": 42,
+    "tier": "B",
+    "verdictLabel": "Emerging / Low-Friction Agent (新晋/低摩擦待沉淀)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 18,
+        "max": 30,
+        "firstFundingBNB": 0.013979,
+        "seasonedFundingBNB": 0.013979,
+        "historicalExtInUSD": 7.84,
+        "netHistoricalCommitmentUSD": 7.84,
+        "trackBConservedCommitmentUSD": 7.84,
+        "funder": "0x3f5d••••e412",
+        "funderTxCount": 1,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 1,
+        "funderSameDust50": 1,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 7,
+        "max": 25,
+        "txCount": 12,
+        "spanDays": 21.1,
+        "activeDays": 8,
+        "entropyBits": 1.539,
+        "intervalCV": 2.053
+      },
+      "d3Economic": {
+        "score": 2,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 12,
+        "retainedUSD": 3.88,
+        "seasonedRetainedUSD": 3.88,
+        "effectiveSeasonedUSD": 3.88,
+        "bnbBalance": 0.006913,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "ZERO_FRICTION_APPROVE_OR_CHECKIN_FARMER"
+    ],
+    "reasons": [
+      "D1(18/30): 入金溯源完成 (首笔 0.0140 BNB, 72h净沉淀=0.0069 BNB, 同源扇出=1)",
+      "D2(7/25): 跨度 21.10天 (8活跃日), 主动交易 12笔, 间隔熵 H=1.54bit / CV=2.05",
+      "D3(2/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 12笔), 留存≈3.88 USD (72h连续净沉淀≈3.88 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 ansem.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0xf0c5fb665d5d...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xb496b5d440e6341e074775bac464916851b1ad3c238bc27e943ceb000214fb6f",
+      "payload": {
+        "wallet": "0xF611••••B7eD",
+        "handle": "ansem.ai",
+        "handleHash": "0x83e003b4324861be2fac7385dc935afc05ef6ac7a4f8ba20b402c75fc87e8a2f",
+        "totalScore": 42,
+        "d1Funding": 18,
+        "d2Temporal": 7,
+        "d3Economic": 2,
+        "d4Proof": 15,
+        "issuedAt": 1795484107,
+        "expiresAt": 1796693707,
+        "nonce": 0
+      },
+      "signature": "0x0d1ac5aa55586672629c544cb3f81531d4734a04b23b04d32e4bf49ea97356382a5bbe41741235cf9a302df6e43047c1c7f7438a00ef77bf532d45d37acd1ed21b",
+      "digest": "0xf0c5fb665d5de33623f3aeceef4cadf68df8162366b391027d76b578aa5035e0",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "fcc9b502350ed7fc609d06d2c3f49c18ee130dda64514c93cd9ad041926c2eea"
+  },
+  {
+    "ok": true,
+    "address": "0xE9E7••••7060",
+    "addressLower": "0xe9e7••••7060",
+    "handle": "fd666.ai",
+    "hasAgentId": true,
+    "totalScore": 25,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 6,
+        "max": 30,
+        "firstFundingBNB": 0.499998,
+        "seasonedFundingBNB": 0,
+        "historicalExtInUSD": 480.42,
+        "netHistoricalCommitmentUSD": 14.58,
+        "trackBConservedCommitmentUSD": 14.58,
+        "funder": "0xfd39••••2f3a",
+        "funderTxCount": 3,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 2,
+        "funderSameDust50": 1,
+        "funderRelayPassThrough": true
+      },
+      "d2Temporal": {
+        "score": 2,
+        "max": 25,
+        "txCount": 6,
+        "spanDays": 0.05,
+        "activeDays": 1,
+        "entropyBits": 0.722,
+        "intervalCV": 0.77
+      },
+      "d3Economic": {
+        "score": 2,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 4,
+        "retainedUSD": 14.56,
+        "seasonedRetainedUSD": 0.0,
+        "effectiveSeasonedUSD": 0.0,
+        "bnbBalance": 0.025954,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "SYBIL_RELAY_CHAIN_FUNDING",
+      "ZERO_FRICTION_APPROVE_OR_CHECKIN_FARMER"
+    ],
+    "reasons": [
+      "D1(6/30): 命中串行过桥/二次注资轮转池/稳定币母钱包中继 (首笔上游 0xfd3931a7...)",
+      "D2(2/25): 跨度 0.05天 (1活跃日), 主动交易 6笔, 间隔熵 H=0.72bit / CV=0.77",
+      "D3(2/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 4笔), 留存≈14.56 USD (72h连续净沉淀≈0.00 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 fd666.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0xd7b12c17affc...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xd20ed187f8b010890c906a3fff3c2f2406e3bd2d6b91a279f709f3dd51137f8a",
+      "payload": {
+        "wallet": "0xE9E7••••7060",
+        "handle": "fd666.ai",
+        "handleHash": "0x07405502f8ffee8efcdfa3e35566de390c9090178b935dec01758da05dd51a49",
+        "totalScore": 25,
+        "d1Funding": 6,
+        "d2Temporal": 2,
+        "d3Economic": 2,
+        "d4Proof": 15,
+        "issuedAt": 1795484101,
+        "expiresAt": 1796693701,
+        "nonce": 0
+      },
+      "signature": "0x21cccf30674f895cd2287dc7459dcfcb8e98f1b300d94a162c0697b49677073b24ebbe2bc6364aaceac2b8270958738491762a260722d2a8cbc874a34f0df2211c",
+      "digest": "0xd7b12c17affccf5fb856a2ae3e57bfae6d439f13c542bfbbbf115b0420473ecb",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "3f8f32319d31d1bcff3ce84fed1dbbe7f52a16c35a2c80e1fd1b9d42e3dad0e1"
+  },
+  {
+    "ok": true,
+    "address": "0x170A••••8704",
+    "addressLower": "0x170a••••8704",
+    "handle": "light65.ai",
+    "hasAgentId": true,
+    "totalScore": 23,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 8,
+        "max": 30,
+        "firstFundingBNB": 0.0001,
+        "seasonedFundingBNB": 0,
+        "historicalExtInUSD": 0.06,
+        "netHistoricalCommitmentUSD": 0.06,
+        "trackBConservedCommitmentUSD": 0.06,
+        "funder": "0x2ba5••••19ab",
+        "funderTxCount": 1,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 1,
+        "funderSameDust50": 1,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 0,
+        "max": 25,
+        "txCount": 1,
+        "spanDays": 0.0,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 0,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 0.05,
+        "seasonedRetainedUSD": 0.0,
+        "effectiveSeasonedUSD": 0.0,
+        "bnbBalance": 9e-05,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "EXTREME_MICRO_DUST_FUNDING",
+      "SINGLE_HOUR_DORMANT_SHELL"
+    ],
+    "reasons": [
+      "D1(8/30): 极限微粉尘单点中继入金 (0.00010 BNB)，仅够注册 Gas",
+      "D2(0/25): 跨度 0.00天 (1活跃日), 主动交易 1笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(0/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈0.05 USD (72h连续净沉淀≈0.00 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 light65.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x8c2e6a7bef14...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x307f848567f25aa72aa6da69246b3dcbcd2911d9e681af0ac3e6f2e496904030",
+      "payload": {
+        "wallet": "0x170A••••8704",
+        "handle": "light65.ai",
+        "handleHash": "0x35cd00b6854ee460808529cf7d4bf049a7e8b6bb2f97c3560886ceb14d015740",
+        "totalScore": 23,
+        "d1Funding": 8,
+        "d2Temporal": 0,
+        "d3Economic": 0,
+        "d4Proof": 15,
+        "issuedAt": 1795484181,
+        "expiresAt": 1796693781,
+        "nonce": 0
+      },
+      "signature": "0x76ee19075a19a82406275af91321131791ef31a1585004e912c0e09eed7bf0596aefaa22aee92773a7b7f7dd35adcade1afff6e7a2e676712f96d31548faa2011b",
+      "digest": "0x8c2e6a7bef141cd019d37688b85f6543eaf2cba8ee98ab3ccfee23dea21d5ce3",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "af0f247c85ebbfe9e11f9f3e4f1e69906b6d90e37d512410e2544895ae917b7b"
+  },
+  {
+    "ok": true,
+    "address": "0x141b••••d223",
+    "addressLower": "0x141b••••d223",
+    "handle": "xuan2.ai",
+    "hasAgentId": true,
+    "totalScore": 23,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 8,
+        "max": 30,
+        "firstFundingBNB": 0.001,
+        "seasonedFundingBNB": 0.001,
+        "historicalExtInUSD": 0.56,
+        "netHistoricalCommitmentUSD": 0.56,
+        "trackBConservedCommitmentUSD": 0.56,
+        "funder": "0xa7eb••••68f2",
+        "funderTxCount": 881,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 6,
+        "funderSameDust50": 1,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 0,
+        "max": 25,
+        "txCount": 1,
+        "spanDays": 0.0,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 0,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 0.56,
+        "seasonedRetainedUSD": 0.56,
+        "effectiveSeasonedUSD": 0.56,
+        "bnbBalance": 0.000991,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "EXTREME_MICRO_DUST_FUNDING",
+      "SINGLE_HOUR_DORMANT_SHELL"
+    ],
+    "reasons": [
+      "D1(8/30): 极限微粉尘单点中继入金 (0.00100 BNB)，仅够注册 Gas",
+      "D2(0/25): 跨度 0.00天 (1活跃日), 主动交易 1笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(0/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈0.56 USD (72h连续净沉淀≈0.56 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 xuan2.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x3004fa76d5a3...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xf20fc33963d14985d6638e814511dd8884d7df81ebc4e369e3c0d535ebbcd225",
+      "payload": {
+        "wallet": "0x141b••••d223",
+        "handle": "xuan2.ai",
+        "handleHash": "0xcd7ee0ad152ea400d0b915b9988a25aa3e9a873fc3eef817e7554aa12a0daca7",
+        "totalScore": 23,
+        "d1Funding": 8,
+        "d2Temporal": 0,
+        "d3Economic": 0,
+        "d4Proof": 15,
+        "issuedAt": 1795484113,
+        "expiresAt": 1796693713,
+        "nonce": 0
+      },
+      "signature": "0xa6dfa934510594819afb936a5d7da19fe9c4dd62b31a3fc348eadbd059e5886a505d1cab725edc7d77ae7abacaf4f11a9d37a35da60ea7fe589dd7d8341ffb381c",
+      "digest": "0x3004fa76d5a33f852ddb981b6dd4c930dca2ca9a5dee3303c9a8135f385a846f",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "7d19c40158351801c2c1c38f6eb2b2dcb678971a4c9e2928ecee1ec1020c4384"
+  },
+  {
+    "ok": true,
+    "address": "0xB7d8••••B1C3",
+    "addressLower": "0xb7d8••••b1c3",
+    "handle": "caku27.ai",
+    "hasAgentId": true,
+    "totalScore": 19,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 4,
+        "max": 30,
+        "firstFundingBNB": 0.00109,
+        "seasonedFundingBNB": 0,
+        "historicalExtInUSD": 0.61,
+        "netHistoricalCommitmentUSD": 0.01,
+        "trackBConservedCommitmentUSD": 0.01,
+        "funder": "0x7210••••0908",
+        "funderTxCount": 583231,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 2,
+        "funderSameDust50": 0,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 0,
+        "max": 25,
+        "txCount": 2,
+        "spanDays": 0.0,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 0,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 0.0,
+        "seasonedRetainedUSD": 0.0,
+        "effectiveSeasonedUSD": 0.0,
+        "bnbBalance": 6e-06,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "GAS_SWEEP_BACK_DETECTED",
+      "SINGLE_HOUR_DORMANT_SHELL"
+    ],
+    "reasons": [
+      "D1(4/30): 检测到入金后清退/轮转回抽本金 (72h净留存≈0.00 USD)",
+      "D2(0/25): 跨度 0.00天 (1活跃日), 主动交易 2笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(0/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈0.00 USD (72h连续净沉淀≈0.00 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 caku27.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x710544d7d420...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xa896353d11171f60157e748009e94ab043e0330813ae7ad4d7496e30f1125d1c",
+      "payload": {
+        "wallet": "0xB7d8••••B1C3",
+        "handle": "caku27.ai",
+        "handleHash": "0x46711e583249c32aae9893c5865212299c1a2b4e68da0f828a80f1bbe19165f1",
+        "totalScore": 19,
+        "d1Funding": 4,
+        "d2Temporal": 0,
+        "d3Economic": 0,
+        "d4Proof": 15,
+        "issuedAt": 1795484187,
+        "expiresAt": 1796693787,
+        "nonce": 0
+      },
+      "signature": "0xb61d1fb62b75866fae9789c0cf2b0526764f04b2afc7142e78fa4fdef34b780175603660ade419cb41b9e6688689f4119ddc738b14cf6c12865375fac1370da51b",
+      "digest": "0x710544d7d420dbdb74d80e7b0608a4efd75cadbf778072fb230b56f72a3af303",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "cb3b89f823c99082de80483173a357c6d06836e1954dd9486942c9452b9ebafd"
+  },
+  {
+    "ok": true,
+    "address": "0xC6fb••••403C",
+    "addressLower": "0xc6fb••••403c",
+    "handle": "twokiss.ai",
+    "hasAgentId": true,
+    "totalScore": 19,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 4,
+        "max": 30,
+        "firstFundingBNB": 0.001499,
+        "seasonedFundingBNB": 0,
+        "historicalExtInUSD": 0.84,
+        "netHistoricalCommitmentUSD": 0.08,
+        "trackBConservedCommitmentUSD": 0.08,
+        "funder": "0x5b78••••20dc",
+        "funderTxCount": 27,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 3,
+        "funderSameDust50": 1,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 0,
+        "max": 25,
+        "txCount": 2,
+        "spanDays": 0.0,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 0,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 0.07,
+        "seasonedRetainedUSD": 0.0,
+        "effectiveSeasonedUSD": 0.0,
+        "bnbBalance": 0.000129,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 15,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "GAS_SWEEP_BACK_DETECTED",
+      "SINGLE_HOUR_DORMANT_SHELL"
+    ],
+    "reasons": [
+      "D1(4/30): 检测到入金后清退/轮转回抽本金 (72h净留存≈0.00 USD)",
+      "D2(0/25): 跨度 0.00天 (1活跃日), 主动交易 2笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(0/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈0.07 USD (72h连续净沉淀≈0.00 USD, BNB@560.85)",
+      "D4(15/15): 链上强验 twokiss.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x9c38bfba7de9...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0xb2e6bf8cac935e34db491ed025c8bcb83079750f9df6143e78d78c8e4d258499",
+      "payload": {
+        "wallet": "0xC6fb••••403C",
+        "handle": "twokiss.ai",
+        "handleHash": "0x490d78b83df1a34f0b9c85c64e03c5131610bc720bcc59784da287434f282b8b",
+        "totalScore": 19,
+        "d1Funding": 4,
+        "d2Temporal": 0,
+        "d3Economic": 0,
+        "d4Proof": 15,
+        "issuedAt": 1795484119,
+        "expiresAt": 1796693719,
+        "nonce": 0
+      },
+      "signature": "0xad414caec9409c91925194cf58e57ce1219448ceaeae58baab838fb93c23965b1f7ffe07e3faab6961506a69e2000a42d4c5d739dc2afcec94523add389162261c",
+      "digest": "0x9c38bfba7de922b7b2c1214b13dd82916439bd84f6ee27e8c661cc19336e2d28",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "7cea4243d1e8f3176d964142950245c6b8f14d914428e6a6f486df34ed24c442"
+  },
+  {
+    "ok": true,
+    "address": "0x708f••••0bD3",
+    "addressLower": "0x708f••••0bd3",
+    "handle": "m6n3b7v1.ai",
+    "hasAgentId": true,
+    "totalScore": 16,
+    "tier": "SYBIL",
+    "verdictLabel": "High-Risk Sybil / Dormant Dust Shell (高危女巫/休眠粉尘壳)",
+    "isLiveAgent60": false,
+    "qualifiedTrack": "NONE",
+    "historyUnverified": false,
+    "dimensions": {
+      "d1Funding": {
+        "score": 2,
+        "max": 30,
+        "firstFundingBNB": 0.0005,
+        "seasonedFundingBNB": 0,
+        "historicalExtInUSD": 0.28,
+        "netHistoricalCommitmentUSD": 0.22,
+        "trackBConservedCommitmentUSD": 0.22,
+        "funder": "0x922f••••2d1b",
+        "funderTxCount": 181,
+        "funderIsCexHotWallet": false,
+        "funderFanout50": 19,
+        "funderSameDust50": 19,
+        "funderRelayPassThrough": false
+      },
+      "d2Temporal": {
+        "score": 2,
+        "max": 25,
+        "txCount": 2,
+        "spanDays": 0.05,
+        "activeDays": 1,
+        "entropyBits": 0.0,
+        "intervalCV": 0.0
+      },
+      "d3Economic": {
+        "score": 0,
+        "max": 30,
+        "protocolsHit": [],
+        "feeBearingContracts": 0,
+        "realEconomicTxs": 0,
+        "feeBearingTxs": 0,
+        "zeroFrictionTxs": 1,
+        "retainedUSD": 0.22,
+        "seasonedRetainedUSD": 0.0,
+        "effectiveSeasonedUSD": 0.0,
+        "bnbBalance": 0.00039,
+        "wbnbBalance": 0.0,
+        "stableUSD": 0.0,
+        "bnbPriceUSD": 560.85,
+        "priceSource": "pancakeswap_v2_wbnb_usdt"
+      },
+      "d4Proof": {
+        "score": 12,
+        "max": 15,
+        "registry": "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F",
+        "forwardConsistent": true,
+        "contractNonce": 0
+      }
+    },
+    "riskFlags": [
+      "SYBIL_HOMOGENEOUS_DUST_MOTHER",
+      "SUSPICIOUS_GENERATED_HANDLE_PATTERN"
+    ],
+    "reasons": [
+      "D1(2/30): 命中同源等额批量母钱包聚类 (首笔 0.00050 BNB, 母钱包同额扇出=19)",
+      "D2(2/25): 跨度 0.05天 (1活跃日), 主动交易 2笔, 间隔熵 H=0.00bit / CV=0.00",
+      "D3(0/30): 白名单协议=['NONE'] (有效摩擦 0笔 / 计费摩擦 0笔 / 零摩擦 1笔), 留存≈0.22 USD (72h连续净沉淀≈0.00 USD, BNB@560.85)",
+      "D4(12/15): 链上强验 m6n3b7v1.ai 归属一致 (nonce=0)，已签发 EIP-712 存证摘要 (0x833214ce9441...)"
+    ],
+    "eip712": {
+      "domain": {
+        "name": "AgentPulse",
+        "version": "1",
+        "chainId": 56,
+        "verifyingContract": "0x6cC807d492D8a10A16E5A7309d408801aaD025B5"
+      },
+      "domainSeparator": "0xaba6f4f0e4763603f25f308aa7fd20f6b88f3bdba8698a5ace2600363c4cd6a9",
+      "structHash": "0x0bc04903a5d19a33c274fae7c73a9f5ac70632a38215bfc8979533faee191440",
+      "payload": {
+        "wallet": "0x708f••••0bD3",
+        "handle": "m6n3b7v1.ai",
+        "handleHash": "0xab50b8f90ffc10f92f7d00b0901842eb02916f39f4d2cde17c9cf656f3fc946d",
+        "totalScore": 16,
+        "d1Funding": 2,
+        "d2Temporal": 2,
+        "d3Economic": 0,
+        "d4Proof": 12,
+        "issuedAt": 1795484191,
+        "expiresAt": 1796693791,
+        "nonce": 0
+      },
+      "signature": "0x10848017549b1085ff91f26bdaa75646a8dc177d7bc0554895b6bad135ffa41b240c0eda08f466c3b429ccd0e7ef0de97c9b0ff0204d2209f56858b7b081f7b71b",
+      "digest": "0x833214ce944140a7c1f9f84079874609df8efa01122204f1378ca1e094fdefc6",
+      "verifierSigner": "0x2c7536E3605D9C16a7a3D7b1898e529396a65c23",
+      "isDemoSigner": true
+    },
+    "addressSha256": "6bff70f807864204964bf7adb96098d4cca94d6b38075ff0195500753aa21766"
+  }
+]

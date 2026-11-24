@@ -1,0 +1,10 @@
+{
+  "name": "agent-pulse",
+  "version": "1.0.0",
+  "description": "Self-Check Liveness Attestation & One-Line B2B Sybil-Resistance Gate for .ai Agents on BNB Smart Chain",
+  "license": "MIT",
+  "author": "RedKoi Research",
+  "dependencies": {
+    "solc": "^0.8.24"
+  }
+}
